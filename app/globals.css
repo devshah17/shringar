@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SHRINGAR — Royale Theme System
+   Luxury themes for a salon / parlour management app.
+   Each theme is a CSS class toggled on <html> or a wrapper container.
+   Fulfills the shadcn/ui CSS variable contract with custom element tokens.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Tailwind v4 design tokens ────────────────────────────────────────────── */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Radius scale */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Map shadcn CSS vars → Tailwind colour tokens */
+  --color-background:        var(--background);
+  --color-foreground:        var(--foreground);
+  --color-card:              var(--card);
+  --color-card-foreground:   var(--card-foreground);
+  --color-popover:           var(--popover);
+  --color-popover-foreground:var(--popover-foreground);
+  --color-primary:           var(--primary);
+  --color-primary-foreground:var(--primary-foreground);
+  --color-secondary:         var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:             var(--muted);
+  --color-muted-foreground:  var(--muted-foreground);
+  --color-accent:            var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive:       var(--destructive);
+  --color-border:            var(--border);
+  --color-input:             var(--input);
+  --color-ring:              var(--ring);
+  --color-navbar:            var(--navbar);
+  --color-navbar-foreground: var(--navbar-foreground);
+  --color-heading:           var(--heading);
+  --color-primary-hover:     var(--primary-hover);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE (Root) — Royale 2 (Official Default Brand Palette)
+   Main background: #F8F0E8 · Navbar: #520817 · Primary button: #520817
+   Primary button text: #EED8B0 · Product cards: #FFFFFF · Headings: #321019
+   Body text: #55434A · Gold icons: #C58B3C · Hover button: #741B32 · Borders: #E5D4C1
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  --radius: 0.625rem;
+
+  /* Element mappings */
+  --navbar:                  #520817;
+  --navbar-foreground:       #EED8B0;
+  --background:              #F8F0E8;
+  --foreground:              #55434A;
+  --heading:                 #321019;
+  --card:                    #FFFFFF;
+  --card-foreground:         #55434A;
+  --popover:                 #FFFFFF;
+  --popover-foreground:      #55434A;
+  --primary:                 #520817;
+  --primary-foreground:      #EED8B0;
+  --primary-hover:           #741B32;
+  --secondary:               #F1E3D4;
+  --secondary-foreground:    #520817;
+  --muted:                   #F1E3D4;
+  --muted-foreground:        #6D5961;
+  --accent:                  #C58B3C;
+  --accent-foreground:       #FFFFFF;
+  --destructive:             #A81B1B;
+  --border:                  #E5D4C1;
+  --input:                   #E5D4C1;
+  --ring:                    #C58B3C;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME 1 — Royale 2 (Official Brand Signature)
+   Main background: #F8F0E8 · Navbar: #520817 · Primary button: #520817
+   Primary button text: #EED8B0 · Product cards: #FFFFFF · Headings: #321019
+   Body text: #55434A · Gold icons: #C58B3C · Hover button: #741B32 · Borders: #E5D4C1
+   ═══════════════════════════════════════════════════════════════════════════ */
+.theme-royale-2 {
+  --radius: 0.625rem;
+  --navbar:                  #520817;
+  --navbar-foreground:       #EED8B0;
+  --background:              #F8F0E8;
+  --foreground:              #55434A;
+  --heading:                 #321019;
+  --card:                    #FFFFFF;
+  --card-foreground:         #55434A;
+  --popover:                 #FFFFFF;
+  --popover-foreground:      #55434A;
+  --primary:                 #520817;
+  --primary-foreground:      #EED8B0;
+  --primary-hover:           #741B32;
+  --secondary:               #F1E3D4;
+  --secondary-foreground:    #520817;
+  --muted:                   #F1E3D4;
+  --muted-foreground:        #6D5961;
+  --accent:                  #C58B3C;
+  --accent-foreground:       #FFFFFF;
+  --destructive:             #A81B1B;
+  --border:                  #E5D4C1;
+  --input:                   #E5D4C1;
+  --ring:                    #C58B3C;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME 2 — Velvet Rouge
+   Deep Velvet Wine #78182E · Blush Rose #C86D7E · Soft Linen #F7EFE6
+   ═══════════════════════════════════════════════════════════════════════════ */
+.theme-velvet-rouge {
+  --radius: 0.625rem;
+  --navbar:                  #580D1D;
+  --navbar-foreground:       #FDF8F2;
+  --background:              #F7EFE6;
+  --foreground:              #2E0B14;
+  --heading:                 #2E0B14;
+  --card:                    #FFF9F4;
+  --card-foreground:         #2E0B14;
+  --popover:                 #FFF9F4;
+  --popover-foreground:      #2E0B14;
+  --primary:                 #78182E;
+  --primary-foreground:      #FDF8F2;
+  --primary-hover:           #96243D;
+  --secondary:               #ECD9CD;
+  --secondary-foreground:    #4D1424;
+  --muted:                   #EEDCCE;
+  --muted-foreground:        #7E4F44;
+  --accent:                  #C86D7E;
+  --accent-foreground:       #FFF9F4;
+  --destructive:             #B82020;
+  --border:                  #E2CBBC;
+  --input:                   #E2CBBC;
+  --ring:                    #78182E;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME 3 — Mahogany Silk
+   Rich Mahogany #5E1C11 · Rose Copper #C8785E · Warm Sand Silk #F7ECE5
+   ═══════════════════════════════════════════════════════════════════════════ */
+.theme-mahogany-silk {
+  --radius: 0.5rem;
+  --navbar:                  #4D150B;
+  --navbar-foreground:       #FEF9F6;
+  --background:              #F7ECE5;
+  --foreground:              #280803;
+  --heading:                 #280803;
+  --card:                    #FEF9F6;
+  --card-foreground:         #280803;
+  --popover:                 #FEF9F6;
+  --popover-foreground:      #280803;
+  --primary:                 #5E1C11;
+  --primary-foreground:      #FEF9F6;
+  --primary-hover:           #78281A;
+  --secondary:               #EDD6CA;
+  --secondary-foreground:    #3B1209;
+  --muted:                   #EED9CE;
+  --muted-foreground:        #7A4437;
+  --accent:                  #C8785E;
+  --accent-foreground:       #FEF9F6;
+  --destructive:             #A82218;
+  --border:                  #DFC6BA;
+  --input:                   #DFC6BA;
+  --ring:                    #5E1C11;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GLOBAL BASE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading, var(--foreground));
+}
